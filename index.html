@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solstice Atelier | Architectural Acoustics & Glass Optics, Kyoto</title>
+  <meta name="description" content="Solstice Atelier designs custom resonant listening rooms and hand-cast acoustic glass lenses in Kyoto, harmonizing sound waves through architectural mass and optical precision.">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Single-line Desktop Header with Clean Scroll Separation -->
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a href="#" class="nav-brand" aria-label="Solstice Atelier home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        SOLSTICE ATELIER
+      </a>
+
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#flagships" class="nav-link">Flagship chambers</a></li>
+          <li><a href="#resonance-lab" class="nav-link">Resonance lab</a></li>
+          <li><a href="#manifesto" class="nav-link">Studio manifesto</a></li>
+        </ul>
+        <button class="btn-primary open-booking-drawer" type="button">Book a visit</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Opening Screen: Wall-to-Wall Poster Hero with Diagonal Tension & Interactive Caustic Canvas -->
+    <section class="hero-section" aria-label="Introduction">
+      <div class="hero-canvas-container" aria-hidden="true">
+        <canvas id="causticCanvas"></canvas>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-headline-block">
+          <h1 class="hero-title">
+            <span class="hero-title-line">Acoustic</span>
+            <span class="hero-title-line">geometry in</span>
+            <span class="hero-title-line hero-title-accent">cast glass</span>
+          </h1>
+        </div>
+
+        <div class="hero-lower-stage">
+          <div class="hero-summary-box">
+            <p class="hero-copy">
+              We sculpt bespoke listening sanctuaries and optical acoustic lenses in Kyoto, harmonizing sound waves through pure cast glass and natural resonance.
+            </p>
+            <a href="#resonance-lab" class="btn-cobalt">Explore the resonance lab</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Asymmetric 60/40 Editorial Split (Flagship Installations) -->
+    <section id="flagships" class="editorial-section" aria-labelledby="flagship-title">
+      <div class="section-header">
+        <h2 id="flagship-title" class="section-title">Bespoke architectural listening sanctuaries</h2>
+      </div>
+
+      <!-- Installation 1: 60/40 split with architectural SVG schematic -->
+      <article class="installation-block" aria-labelledby="inst-1-heading">
+        <div class="asymmetric-grid">
+          <div class="schematic-frame">
+            <div class="schematic-toolbar">
+              <span class="schematic-caption">Chamber of Elliptical Silence &middot; Kyoto</span>
+              <div class="segmented-control" role="group" aria-label="Schematic layer view">
+                <button class="segment-opt active" data-mode="rays" type="button">Acoustic ray paths</button>
+                <button class="segment-opt" data-mode="absorption" type="button">Absorption zones</button>
+              </div>
+            </div>
+
+            <div class="schematic-svg-wrap">
+              <svg class="schematic-svg" viewBox="0 0 640 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architectural plan of elliptical acoustic chamber">
+                <!-- Architectural Grid -->
+                <defs>
+                  <pattern id="archGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(18, 19, 22, 0.05)" stroke-width="1"/>
+                  </pattern>
+                </defs>
+                <rect width="640" height="400" fill="url(#archGrid)" />
+
+                <!-- Outer Architectural Boundary -->
+                <rect x="30" y="25" width="580" height="350" stroke="#121316" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+
+                <!-- Elliptical Wall Contour -->
+                <ellipse cx="320" cy="200" rx="250" ry="155" stroke="#121316" stroke-width="3" fill="#FAF9F6"/>
+
+                <!-- Cast Glass Lens Perimeter Diffusers -->
+                <path d="M 120 100 Q 140 125 120 150" stroke="#1428A0" stroke-width="2.5" fill="none"/>
+                <path d="M 520 100 Q 500 125 520 150" stroke="#1428A0" stroke-width="2.5" fill="none"/>
+                <path d="M 120 250 Q 140 275 120 300" stroke="#1428A0" stroke-width="2.5" fill="none"/>
+                <path d="M 520 250 Q 500 275 520 300" stroke="#1428A0" stroke-width="2.5" fill="none"/>
+
+                <!-- Layer: Acoustic Ray Paths -->
+                <g class="layer-rays" style="transition: opacity 200ms ease-out;">
+                  <!-- Sound Source at Focal Point 1 -->
+                  <circle cx="200" cy="200" r="5" fill="#D9381E"/>
+                  <text x="180" y="222" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#D9381E">Focus A</text>
+
+                  <!-- Listening Position at Focal Point 2 -->
+                  <circle cx="440" cy="200" r="5" fill="#1428A0"/>
+                  <text x="420" y="222" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#1428A0">Focus B</text>
+
+                  <!-- Specular Sound Reflection Rays -->
+                  <path d="M 200 200 L 320 45 L 440 200" stroke="#D9381E" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <path d="M 200 200 L 320 355 L 440 200" stroke="#D9381E" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <path d="M 200 200 L 150 78 L 440 200" stroke="#D9381E" stroke-width="1.2" stroke-dasharray="3 3"/>
+                  <path d="M 200 200 L 490 78 L 440 200" stroke="#D9381E" stroke-width="1.2" stroke-dasharray="3 3"/>
+                  <path d="M 200 200 L 150 322 L 440 200" stroke="#D9381E" stroke-width="1.2" stroke-dasharray="3 3"/>
+                  <path d="M 200 200 L 490 322 L 440 200" stroke="#D9381E" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+                  <!-- Optical Caustic Wavefront Dispersion -->
+                  <ellipse cx="200" cy="200" rx="35" ry="35" stroke="rgba(217, 56, 30, 0.4)" stroke-width="1" fill="none"/>
+                  <ellipse cx="200" cy="200" rx="70" ry="70" stroke="rgba(217, 56, 30, 0.25)" stroke-width="1" fill="none"/>
+                </g>
+
+                <!-- Layer: Absorption Zones -->
+                <g class="layer-absorption" style="opacity: 0.15; transition: opacity 200ms ease-out;">
+                  <!-- Corner Basalt Traps -->
+                  <path d="M 70 70 L 110 70 L 70 110 Z" fill="#121316"/>
+                  <path d="M 570 70 L 530 70 L 570 110 Z" fill="#121316"/>
+                  <path d="M 70 330 L 110 330 L 70 290 Z" fill="#121316"/>
+                  <path d="M 570 330 L 530 330 L 570 290 Z" fill="#121316"/>
+                  <text x="80" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#52555E">Sub-bass trap</text>
+                  <text x="495" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#52555E">Sub-bass trap</text>
+                </g>
+
+                <!-- Scale and Dimension Annotation -->
+                <line x1="70" y1="365" x2="570" y2="365" stroke="#121316" stroke-width="1"/>
+                <line x1="70" y1="360" x2="70" y2="370" stroke="#121316" stroke-width="1"/>
+                <line x1="570" y1="360" x2="570" y2="370" stroke="#121316" stroke-width="1"/>
+                <text x="300" y="380" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#121316" class="num-data">14.2 m Major Axis</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="editorial-content">
+            <h3 id="inst-1-heading" class="editorial-subheading">Sculpted elliptical focus prevents flutter echo</h3>
+            <p class="editorial-text">
+              By replacing parallel planar surfaces with mathematically calculated true ellipses, sound energy travels along conjugate reflection axes. Standing wave nodes converge into controlled dispersion focal points rather than trapped room flutter.
+            </p>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <span class="feature-marker" aria-hidden="true"></span>
+                <span>Dual geometric focal nodes eliminate slapback echoes without deadening high frequencies.</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-marker" aria-hidden="true"></span>
+                <span>Four peripheral hand-cast borosilicate optical lenses scatter upper harmonic treble evenly.</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-marker" aria-hidden="true"></span>
+                <span>Concealed corner basalt cavities absorb low-frequency rumble below sixty hertz.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Installation 2: Inverted 40/60 split with architectural SVG schematic -->
+      <article class="installation-block" aria-labelledby="inst-2-heading">
+        <div class="asymmetric-grid inverted">
+          <div class="editorial-content">
+            <h3 id="inst-2-heading" class="editorial-subheading">Concave glass prisms disperse high frequency reflections</h3>
+            <p class="editorial-text">
+              Built into the granite foothills of northern Kyoto, the Kurama Sanctuary couples deep subterranean rock mass with an overhead canopy of suspended cast-glass acoustic prisms, achieving natural decay times tailored for chamber music and solo voice.
+            </p>
+            <ul class="feature-list">
+              <li class="feature-item vermilion">
+                <span class="feature-marker" aria-hidden="true"></span>
+                <span>Heavy basalt foundation isolates exterior seismic and urban noise interference.</span>
+              </li>
+              <li class="feature-item vermilion">
+                <span class="feature-marker" aria-hidden="true"></span>
+                <span>Suspended optical glass prism canopy redirects specular reflections toward acoustic baffles.</span>
+              </li>
+              <li class="feature-item vermilion">
+                <span class="feature-marker" aria-hidden="true"></span>
+                <span>Linear reverberation decay calibrated to half a second across all musical registers.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="schematic-frame">
+            <div class="schematic-toolbar">
+              <span class="schematic-caption">Kurama Prism Sanctuary &middot; Northern Kyoto</span>
+              <div class="segmented-control" role="group" aria-label="Schematic layer view">
+                <button class="segment-opt active" data-mode="rays" type="button">Acoustic ray paths</button>
+                <button class="segment-opt" data-mode="absorption" type="button">Absorption zones</button>
+              </div>
+            </div>
+
+            <div class="schematic-svg-wrap">
+              <svg class="schematic-svg" viewBox="0 0 640 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architectural transverse section of Kurama acoustic glass prism sanctuary">
+                <!-- Section background -->
+                <rect width="640" height="400" fill="#FAF9F6"/>
+
+                <!-- Subterranean Granite Base -->
+                <path d="M 40 280 L 600 280 L 600 370 L 40 370 Z" fill="#121316"/>
+                <text x="245" y="335" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#FAF9F6">Solid Granite Sub-base</text>
+
+                <!-- Timber & Glass Structural Columns -->
+                <rect x="80" y="90" width="24" height="190" fill="#52555E"/>
+                <rect x="536" y="90" width="24" height="190" fill="#52555E"/>
+
+                <!-- Concave Acoustic Glass Canopy -->
+                <path d="M 80 90 Q 320 145 560 90" stroke="#1428A0" stroke-width="4" fill="none"/>
+                <text x="260" y="80" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#1428A0">Cast Glass Acoustic Prism</text>
+
+                <!-- Layer: Acoustic Wave Vectors -->
+                <g class="layer-rays" style="transition: opacity 200ms ease-out;">
+                  <!-- Sound Source Center Floor -->
+                  <circle cx="320" cy="270" r="5" fill="#D9381E"/>
+
+                  <!-- Dispersion Rays up toward curved glass prism -->
+                  <path d="M 320 270 L 220 115 L 140 230" stroke="#D9381E" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <path d="M 320 270 L 320 128 L 320 250" stroke="#D9381E" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <path d="M 320 270 L 420 115 L 500 230" stroke="#D9381E" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <path d="M 320 270 L 160 100 L 95 190" stroke="#D9381E" stroke-width="1.2" stroke-dasharray="3 3"/>
+                  <path d="M 320 270 L 480 100 L 545 190" stroke="#D9381E" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+                  <!-- Prismatic Refraction Highlights -->
+                  <circle cx="220" cy="115" r="4" fill="#1428A0"/>
+                  <circle cx="320" cy="128" r="4" fill="#1428A0"/>
+                  <circle cx="420" cy="115" r="4" fill="#1428A0"/>
+                </g>
+
+                <!-- Layer: Absorption Zones -->
+                <g class="layer-absorption" style="opacity: 0.15; transition: opacity 200ms ease-out;">
+                  <!-- Perimeter Low-frequency Helmholz Baffles -->
+                  <rect x="104" y="240" width="50" height="40" fill="#1428A0"/>
+                  <rect x="486" y="240" width="50" height="40" fill="#1428A0"/>
+                  <text x="110" y="265" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#FAF9F6">Baffle</text>
+                  <text x="492" y="265" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#FAF9F6">Baffle</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Section 2: Full-Bleed Cobalt Resonance Lab (#1428A0) -->
+    <section id="resonance-lab" class="resonance-lab-section" aria-labelledby="lab-heading">
+      <div class="lab-container">
+        <div class="lab-header">
+          <h2 id="lab-heading" class="lab-title">Simulate room modes and acoustic harmonics</h2>
+          <p class="lab-intro">
+            Adjust spatial dimensions, boundary materials, and excitation frequencies to visualize eigenmode pressure nodes and listen to synthesized standing waves.
+          </p>
+        </div>
+
+        <div class="lab-stage-grid">
+          <!-- Left Column: Interactive 2D Standing-Wave / Caustic Canvas & Web Audio Controls -->
+          <div class="lab-canvas-card">
+            <div class="lab-canvas-header">
+              <span class="lab-canvas-title">2D modal acoustic pressure field</span>
+              <button id="audioToggleBtn" class="audio-toggle-btn" type="button" aria-pressed="false">
+                <span class="audio-indicator-wave" aria-hidden="true">
+                  <span class="wave-bar"></span>
+                  <span class="wave-bar"></span>
+                  <span class="wave-bar"></span>
+                  <span class="wave-bar"></span>
+                </span>
+                <span class="audio-btn-label">Play acoustic tone</span>
+              </button>
+            </div>
+
+            <div class="lab-canvas-wrap">
+              <canvas id="standingWaveCanvas" role="img" aria-label="Interactive 2D acoustic pressure distribution map"></canvas>
+            </div>
+
+            <div class="lab-canvas-footer">
+              <span>Measured acoustic pressure at probe:</span>
+              <span id="probeReadout" class="probe-readout num-data">78.4 dB SPL (Linear diffusion zone)</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Acoustic Controls Panel -->
+          <div class="lab-controls-panel">
+            <!-- Length Slider -->
+            <div class="control-group">
+              <div class="control-label-row">
+                <label for="sliderLength" class="control-label">Room length</label>
+                <span id="valLength" class="control-value num-data">8.4 m</span>
+              </div>
+              <input type="range" id="sliderLength" class="lab-slider" min="3.0" max="14.0" step="0.1" value="8.4">
+            </div>
+
+            <!-- Width Slider -->
+            <div class="control-group">
+              <div class="control-label-row">
+                <label for="sliderWidth" class="control-label">Room width</label>
+                <span id="valWidth" class="control-value num-data">5.6 m</span>
+              </div>
+              <input type="range" id="sliderWidth" class="lab-slider" min="2.5" max="10.0" step="0.1" value="5.6">
+            </div>
+
+            <!-- Height Slider -->
+            <div class="control-group">
+              <div class="control-label-row">
+                <label for="sliderHeight" class="control-label">Ceiling height</label>
+                <span id="valHeight" class="control-value num-data">3.8 m</span>
+              </div>
+              <input type="range" id="sliderHeight" class="lab-slider" min="2.4" max="6.0" step="0.1" value="3.8">
+            </div>
+
+            <!-- Boundary Material Switcher -->
+            <div class="control-group">
+              <span class="control-label">Boundary wall material</span>
+              <div class="material-toggle-group" role="group" aria-label="Select wall material">
+                <button type="button" class="material-btn active" data-material="cedar">Kyoto cedar</button>
+                <button type="button" class="material-btn" data-material="basalt">Basalt stone</button>
+                <button type="button" class="material-btn" data-material="glass">Cast glass</button>
+              </div>
+              <p id="materialDesc" class="material-description">
+                Warm organic boundary absorption; dampens flutter echoes while enriching low mid-range harmonic overtone warmth.
+              </p>
+            </div>
+
+            <!-- Frequency Slider -->
+            <div class="control-group">
+              <div class="control-label-row">
+                <label for="sliderFreq" class="control-label">Excitation frequency</label>
+                <span id="valFreq" class="control-value num-data">110 Hz</span>
+              </div>
+              <input type="range" id="sliderFreq" class="lab-slider" min="40" max="600" step="1" value="110">
+            </div>
+
+            <!-- Real-time Eigenmode Table -->
+            <div class="eigenmode-table">
+              <div class="table-row">
+                <span class="table-term">Calculated room mode</span>
+                <span id="modalMode" class="table-val num-data">Mode (4, 3, 0)</span>
+              </div>
+              <div class="table-row">
+                <span class="table-term">Total room volume</span>
+                <span id="roomVolume" class="table-val num-data">178.8 m³</span>
+              </div>
+              <div class="table-row">
+                <span class="table-term">Schroeder frequency cutoff</span>
+                <span id="schroederFreq" class="table-val num-data">142 Hz</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Focused Reading Manifesto (<= 65ch) -->
+    <section id="manifesto" class="manifesto-section" aria-labelledby="manifesto-heading">
+      <div class="manifesto-container">
+        <h2 id="manifesto-heading" class="manifesto-heading">Sound is architecture experienced through time</h2>
+        <div class="manifesto-prose">
+          <p class="manifesto-p">
+            Traditional recording and listening environments rely heavily on porous foam or fabric panels to suffocate unwanted reflections. In stripping away resonance, these spaces introduce a quiet claustrophobia that separates the listener from physical presence.
+          </p>
+          <blockquote class="manifesto-quote">
+            When sound waves encounter sculpted cast glass, acoustic reflection becomes an architectural dialogue rather than an engineering compromise.
+          </blockquote>
+          <p class="manifesto-p">
+            In Kyoto, our studio approaches room acoustics through the physical properties of heavy natural mass and optical refraction. By pairing solid subterranean basalt foundations with hand-cast borosilicate glass diffusers, high frequencies are dispersed with crystal clarity while lower octaves breathe naturally. The result is a room that feels simultaneously luminous and acoustically serene.
+          </p>
+          <p class="manifesto-signature">
+            Solstice Atelier &middot; Higashiyama, Kyoto
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Section 4: Bold Structured Footer with Interactive Booking Drawer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div>
+          <h2 class="footer-title">Experience acoustic presence in Kyoto</h2>
+          <p class="footer-lead">
+            Our private listening rooms in Higashiyama are open for scheduled listening sessions, bespoke architectural consultations, and acoustic lens auditions.
+          </p>
+          <button class="btn-primary open-booking-drawer" type="button">Request studio listening appointment</button>
+        </div>
+
+        <div class="footer-meta-grid">
+          <div>
+            <h3 class="meta-block-title">Studio location</h3>
+            <p class="meta-block-text">
+              14 Kodaiji-Minamimon-dori<br>
+              Higashiyama-ku, Kyoto<br>
+              605-0825 Japan
+            </p>
+          </div>
+          <div>
+            <h3 class="meta-block-title">Private hours</h3>
+            <p class="meta-block-text">
+              Tuesday through Sunday<br>
+              10:00 to 18:00 JST<br>
+              By private reservation only
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 Solstice Atelier. All rights reserved.</span>
+        <ul class="footer-links">
+          <li><a href="#flagships">Flagship chambers</a></li>
+          <li><a href="#resonance-lab">Resonance lab</a></li>
+          <li><a href="#manifesto">Manifesto</a></li>
+          <li><a href="#" class="open-booking-drawer">Reserve session</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Studio Visit Booking Drawer -->
+  <div id="bookingDrawer" class="drawer-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <h2 id="drawerTitle" class="drawer-heading">Reserve a listening session</h2>
+        <button class="drawer-close-btn" type="button" aria-label="Close reservation drawer">&times;</button>
+      </div>
+
+      <div class="drawer-body">
+        <form id="bookingForm">
+          <div class="form-group">
+            <label for="guestName" class="form-label">Full name</label>
+            <input type="text" id="guestName" class="form-input" required placeholder="Taro Takahashi">
+          </div>
+
+          <div class="form-group">
+            <label for="guestEmail" class="form-label">Email address</label>
+            <input type="email" id="guestEmail" class="form-input" required placeholder="takahashi@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="preferredChamber" class="form-label">Preferred listening room</label>
+            <select id="preferredChamber" class="form-select">
+              <option value="Chamber of Elliptical Silence">Chamber of Elliptical Silence (Higashiyama)</option>
+              <option value="Kurama Prism Sanctuary">Kurama Prism Sanctuary (Northern Kyoto)</option>
+              <option value="Bespoke Architectural Commission">Bespoke Architectural Commission Consultation</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="listeningMedium" class="form-label">Intended listening medium</label>
+            <select id="listeningMedium" class="form-select">
+              <option value="Analogue vinyl and magnetic tape">Analogue vinyl and magnetic tape</option>
+              <option value="Uncompressed digital master files">Uncompressed digital master files</option>
+              <option value="Acoustic chamber instrument playback">Acoustic chamber instrument playback</option>
+              <option value="Architectural glass lens audition">Architectural glass lens audition</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="sessionSeason" class="form-label">Target season</label>
+            <select id="sessionSeason" class="form-select">
+              <option value="Spring solstice window">Spring solstice window</option>
+              <option value="Autumn equinox window">Autumn equinox window</option>
+              <option value="Winter mist window">Winter mist window</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="acousticNotes" class="form-label">Acoustic objectives or notes</label>
+            <textarea id="acousticNotes" class="form-textarea" placeholder="Specific acoustic references, preferred frequencies, or architectural requirements..."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit-btn">Submit reservation request</button>
+        </form>
+
+        <div id="bookingConfirmation" class="booking-confirmation" aria-live="polite">
+          <h3 class="confirmation-title">Reservation request received</h3>
+          <p class="confirmation-text">
+            Thank you, <strong id="confGuestName"></strong>. We have registered your reservation request for the <strong id="confChamberName"></strong> under confirmation reference <strong id="confCode" class="num-data">KYT-8421</strong>. Our concierge in Higashiyama will contact you within one business day to coordinate your visit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="js/caustic-canvas.js"></script>
+  <script src="js/resonance-lab.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
